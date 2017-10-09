@@ -1,0 +1,75 @@
+void setup() {
+  // set Window size
+  size(500, 500);
+  background(#ffffff);
+} 
+
+void draw() {
+ //DÖNME NOKTASINI MERKEZE ALDIM
+  translate(width/2, height/2);
+
+ //triangle
+
+  fill(#ff0000);
+  triangle(-185,-185,-185,185,0,185);
+  triangle(185,-185,185,185,0,185);
+  fill(#759EED);
+  triangle(-185,-185,185,-185,0,185);
+  triangle(185,185,-185,185,0,-185);
+
+  //elipse
+  
+  pushMatrix();
+  strokeWeight(4);
+  stroke(#000000);
+  fill(#ff0000);
+  ellipse(-185, -185, 80, 80);
+  rotate(radians(90));
+  ellipse(-185, -185, 80, 80);
+  rotate(radians(180));
+  ellipse(-185, -185, 80, 80);
+  rotate(radians(270));
+  ellipse(-185, -185, 80, 80);
+  popMatrix();
+  //push-popMatrix bu sınırlar içerisinde kullan
+ 
+ //quad
+ 
+  pushMatrix();
+  fill(#989B21);
+  rotate(radians(45));
+  quad(0,-185,-185,0,0,185,185,0);
+  popMatrix();
+  quad(0,-185,-185,0,0,185,185,0);
+  
+  //line
+  
+  line(-250,-248,250,-248);
+  line(-250,-200,250,-200);
+  line(-250,-150,250,-150);
+  line(-250,-100,250,-100);
+  line(-250,-50,250,-50);
+  line(-250,-0,250,0);
+  line(-250,50,250,50);
+  line(-250,100,250,100);
+  line(-250,150,250,150);
+  line(-250,200,250,200);
+  line(-250,248,250,248);
+
+ // rectangle
+
+  fill(#00ff00);
+  rect(-25, -25, 50, 50);
+  pushMatrix();
+  rotate(radians(45));
+  rect(100, 100, 50, 50);
+  rotate(radians(180));
+  rect(100, 100, 50, 50);
+  popMatrix();
+  
+  //text
+  
+ fill(#B2A3B2);
+  text("Ezgi_METE_S008130",-50,230);
+  
+} 
