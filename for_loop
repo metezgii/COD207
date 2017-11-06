@@ -1,0 +1,27 @@
+int r=50;
+int p= 50;
+int R= 80;
+
+void setup(){
+  
+  size(600,600);
+  background(155);
+  smooth();
+}
+
+void draw(){
+  for(int x=0; x<80; x=x+1){
+ for (int y=0; y<30; y=y+1){
+    {
+  strokeWeight(8);
+stroke(#D039D1,50);
+  ellipse(p*x,(p+5)*y,R,R);
+    strokeWeight(4);
+stroke(#7856D6,200);
+  ellipse(p*x,(p+5)*y,r,r);
+  
+   
+   }
+    }
+  }
+}
